@@ -1,6 +1,6 @@
 package interfaces
 
-import "github.com/bibin-zoz/ecommerce-api-gateway/pkg/utils/models"
+import "grpc-api-gateway/pkg/utils/models"
 
 type UserClient interface {
 	UsersSignUp(user models.UserSignUp) (models.TokenUser, error)

@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/bibin-zoz/ecommerce-api-gateway/pkg/config"
-	"github.com/bibin-zoz/ecommerce-api-gateway/pkg/di"
+	"grpc-api-gateway/pkg/config"
+	"grpc-api-gateway/pkg/di"
 	"log"
 )
 

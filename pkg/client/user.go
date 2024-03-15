@@ -3,11 +3,10 @@ package client
 import (
 	"context"
 	"fmt"
-
-	interfaces "github.com/bibin-zoz/ecommerce-api-gateway/pkg/client/interface"
-	"github.com/bibin-zoz/ecommerce-api-gateway/pkg/config"
-	pb "github.com/bibin-zoz/ecommerce-api-gateway/pkg/pb/user"
-	"github.com/bibin-zoz/ecommerce-api-gateway/pkg/utils/models"
+	interfaces "grpc-api-gateway/pkg/client/interface"
+	"grpc-api-gateway/pkg/config"
+	pb "grpc-api-gateway/pkg/pb/user"
+	"grpc-api-gateway/pkg/utils/models"
 
 	"google.golang.org/grpc"
 )

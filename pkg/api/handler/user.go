@@ -1,11 +1,10 @@
 package handler
 
 import (
+	interfaces "grpc-api-gateway/pkg/client/interface"
+	"grpc-api-gateway/pkg/utils/models"
+	"grpc-api-gateway/pkg/utils/response"
 	"net/http"
-
-	interfaces "github.com/bibin-zoz/ecommerce-api-gateway/pkg/client/interface"
-	"github.com/bibin-zoz/ecommerce-api-gateway/pkg/utils/models"
-	response "github.com/bibin-zoz/ecommerce-api-gateway/pkg/utils/responce"
 
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator/v10"

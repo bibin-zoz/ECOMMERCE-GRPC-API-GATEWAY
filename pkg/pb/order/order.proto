@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+package order;
+
+option go_package = "./pkg/pb/order";
+
+service Order{
+    rpc OrderItemsFromCart(OrderItemsFromCartRequest) returns (OrderItemsFromCartResponse){};
+    rpc GetOrderDetails(GetOrderDetailsRequest)returns(GetOrderDetailsResponse){};
+}
+message OrderItem{
+    int64 AddressID=1;
+    int64 PaymentID=2;
+}
+message OrderItemsFromCartRequest{
+    OrderItem OrderFromCart=1;
+    int64 UserID=2;
+}
+message OrderItemsFromCartResponse{
+    int64 OrderID=1;
+    string Shipmentstatus=2;
+    string Error=3;
+}
+message GetOrderDetailsRequest{
+    int64 UserID=1;
+    int64 Page=2;
+    int64 Count=3;
+}
+message OrderDetails{
+    int64 OrderID=1;
+    float Price=2;
+    string Shipmentstatus=3;
+    string Paymentstatus=4;
+}
+message OrderProductDetails{
+    int64 ProductID=1;
+    string ProductName=2;
+    int64 Quantity=3;
+    float Price=4;
+}
+message FullOrderDetails{
+    OrderDetails orderdetails=1;
+    repeated OrderProductDetails OrderProductDetails=2;
+}
+message GetOrderDetailsResponse{
+    repeated FullOrderDetails Details=1;
+    string Error=2;
+}
